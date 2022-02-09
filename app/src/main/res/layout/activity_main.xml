@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_launcher_background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:src="@drawable/title"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:textColor="#ff00"
+        android:textStyle="bold"
+        android:textSize="100px"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"/>
+
+
+    <CheckBox
+        android:textAlignment="center"
+        android:id="@+id/checkBoxOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:textAlignment="center"
+        android:id="@+id/checkBoxTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxOne" />
+
+    <CheckBox
+        android:textAlignment="center"
+        android:id="@+id/checkBoxThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxTwo" />
+
+    <SeekBar
+        android:progressDrawable="@android:color/transparent"
+        android:thumb="@drawable/doraemon1"
+        android:id="@+id/seekBarOne"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintLeft_toRightOf="@id/checkBoxOne"
+        app:layout_constraintTop_toTopOf="@id/checkBoxOne"
+        app:layout_constraintBottom_toBottomOf="@id/checkBoxOne"/>
+
+    <SeekBar
+        android:id="@+id/seekBarTwo"
+        android:progressDrawable="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="10dp"
+        android:thumb="@drawable/nobita1"
+        app:layout_constraintBottom_toBottomOf="@id/checkBoxTwo"
+        app:layout_constraintStart_toEndOf="@id/checkBoxTwo"
+        app:layout_constraintTop_toTopOf="@id/checkBoxTwo" />
+
+    <SeekBar
+        android:thumb="@drawable/chaien1"
+        android:progressDrawable="@android:color/transparent"
+        android:id="@+id/seekBarThree"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toEndOf="@id/checkBoxThree"
+        app:layout_constraintTop_toTopOf="@+id/checkBoxThree"
+        app:layout_constraintBottom_toBottomOf="@id/checkBoxThree"/>
+
+    <ImageButton
+        android:id="@+id/btnStart"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>
